@@ -23,6 +23,46 @@
     @media(max-width:740px){html{scroll-padding-top:78px}.container{width:min(var(--max),calc(100% - 36px))}.header-inner{height:70px}.desktop-nav{display:none}.mobile-nav{display:block}.mobile-nav details{position:relative}.mobile-nav summary{display:flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid var(--line);border-radius:11px;color:var(--navy);font-size:.86rem;font-weight:700;cursor:pointer;list-style:none}.mobile-nav summary::-webkit-details-marker{display:none}.mobile-nav summary::after{content:"⌄";font-size:1rem}.mobile-nav details[open] summary::after{content:"⌃"}.mobile-nav__links{position:absolute;top:calc(100% + 10px);right:0;min-width:210px;display:grid;gap:4px;padding:10px;border:1px solid var(--line);border-radius:15px;background:#fff;box-shadow:0 15px 38px rgba(16,43,80,.15)}.mobile-nav__links>a{padding:10px 11px;border-radius:9px;color:#45556c;text-decoration:none;font-size:.9rem;font-weight:650}.mobile-nav__links>a:hover{background:var(--pale);color:var(--blue)}.mobile-nav__links>.button{margin-top:5px;color:#fff}.hero-grid{min-height:auto;grid-template-columns:1fr;gap:38px;padding-block:65px}.hero h1{max-width:580px;font-size:clamp(2.75rem,11vw,4.4rem)}.hero-copy>p{font-size:1.02rem}.hero-art{min-height:320px}.orbit{width:min(74vw,340px)}.tech-card{width:min(100%,420px)}.circuit-scene{height:155px}.section{padding:76px 0}.service-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.service-card{min-height:220px;padding:19px}.approach-grid,.contact-inner,.faq-layout{grid-template-columns:1fr;gap:33px}.contact-inner{gap:32px}.faq-layout{gap:22px}.footer-inner{align-items:flex-start;flex-direction:column}.footer-links{gap:16px}}
     @media(max-width:480px){.container{width:calc(100% - 30px)}.brand{gap:8px}.brand img{width:39px;height:39px}.brand-copy strong{font-size:.9rem}.brand-copy span{font-size:.53rem}.hero-grid{padding-block:54px}.hero-actions{align-items:stretch;flex-direction:column}.hero-actions .button{width:100%}.hero-note{align-items:flex-start}.hero-art{min-height:300px}.tech-card{padding:17px;border-radius:20px}.circuit-scene{height:135px;margin:16px 0}.service-pills span{font-size:.68rem;padding:6px 8px}.service-grid{grid-template-columns:1fr}.service-card{min-height:auto;padding:21px}.service-icon{margin-bottom:13px}.section-heading-row{margin-bottom:26px}.step{grid-template-columns:42px 1fr;gap:12px;padding:16px}.step-number{width:39px;height:39px}.contact-item{grid-template-columns:43px 1fr auto;gap:11px;padding:13px}.contact-item-icon{width:42px;height:42px}.contact-item strong{font-size:.87rem}.contact-actions{flex-direction:column;align-items:stretch}.contact-actions .button{width:100%}.footer-brand{align-items:flex-start;flex-direction:column}.footer-brand img{width:168px}.footer-bottom{align-items:flex-start;flex-direction:column}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+    /* Give each section its own rhythm instead of repeating one page-wide spacing value. */
+    .hero-grid{padding-block:clamp(78px,9vw,112px)}
+    .services-section{padding:clamp(88px,9vw,126px) 0 112px;background:linear-gradient(180deg,#fff 0%,#f9fbfe 100%)}
+    .approach-section{padding:clamp(78px,8vw,104px) 0 clamp(102px,11vw,142px)}
+    .contact-section{padding:clamp(106px,12vw,148px) 0 clamp(88px,9vw,118px)}
+    .faq-section{padding:clamp(78px,8vw,102px) 0 clamp(108px,12vw,148px)}
+    .service-grid{gap:22px;align-items:stretch}
+    .service-card{position:relative;min-height:0;padding:0 22px 24px;overflow:hidden;border-color:#e3eaf3;border-radius:22px;background:#fff;box-shadow:0 9px 28px rgba(16,43,80,.045);transition:transform .25s,border-color .25s,box-shadow .25s}
+    .service-card::before{content:"";display:block;width:calc(100% + 44px);height:190px;margin:0 -22px;background-color:#dce8f5;background-position:center;background-size:cover;transition:transform .45s cubic-bezier(.2,.75,.25,1)}
+    .service-card::after{position:absolute;z-index:1;top:14px;left:14px;padding:7px 10px;border:1px solid rgba(255,255,255,.3);border-radius:999px;background:rgba(8,27,53,.72);color:#fff;content:"";font-size:.66rem;font-weight:800;letter-spacing:.1em;backdrop-filter:blur(8px)}
+    .service-card:nth-child(1)::before{background-image:linear-gradient(180deg,rgba(8,27,53,.02),rgba(8,27,53,.25)),url("assets/services/software-development.webp")}
+    .service-card:nth-child(2)::before{background-image:linear-gradient(180deg,rgba(8,27,53,.02),rgba(8,27,53,.25)),url("assets/services/web-development.webp")}
+    .service-card:nth-child(3)::before{background-image:linear-gradient(180deg,rgba(8,27,53,.02),rgba(8,27,53,.25)),url("assets/services/project-assistance.webp")}
+    .service-card:nth-child(4)::before{background-image:linear-gradient(180deg,rgba(8,27,53,.02),rgba(8,27,53,.25)),url("assets/services/cctv-installation.webp")}
+    .service-card:nth-child(5)::before{background-image:linear-gradient(180deg,rgba(8,27,53,.02),rgba(8,27,53,.25)),url("assets/services/laptop-repairs.webp")}
+    .service-card:nth-child(6)::before{background-image:linear-gradient(180deg,rgba(8,27,53,.02),rgba(8,27,53,.25)),url("assets/services/windows-installation.webp")}
+    .service-card:nth-child(7)::before{background-image:linear-gradient(180deg,rgba(8,27,53,.02),rgba(8,27,53,.25)),url("assets/services/tech-support.webp")}
+    .service-card:nth-child(1)::after{content:"01  /  SOFTWARE"}
+    .service-card:nth-child(2)::after{content:"02  /  WEB"}
+    .service-card:nth-child(3)::after{content:"03  /  PROJECTS"}
+    .service-card:nth-child(4)::after{content:"04  /  SECURITY"}
+    .service-card:nth-child(5)::after{content:"05  /  REPAIR"}
+    .service-card:nth-child(6)::after{content:"06  /  SETUP"}
+    .service-card:nth-child(7)::after{content:"07  /  SUPPORT"}
+    .service-card:hover{transform:translateY(-5px);border-color:#bfd4ed;box-shadow:0 20px 48px rgba(16,43,80,.12)}
+    .service-card:hover::before{transform:scale(1.045)}
+    .service-icon{position:absolute;z-index:2;top:162px;left:18px;width:54px;height:54px;margin:0;border:3px solid #fff;border-radius:17px;background:#edf5ff;box-shadow:0 7px 20px rgba(8,27,53,.14)}
+    .service-card h3{margin:38px 0 7px;font-size:1.08rem}
+    .service-card p{font-size:.9rem;line-height:1.7}
+    .service-card--support{border-color:#d8e6f6;background:linear-gradient(145deg,#f3f8ff,#fff)}
+    .service-photo-note{margin:17px 2px 0;color:#718096;text-align:right;font-size:.76rem}
+    .service-card--support{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr auto;min-height:220px;padding:0}
+    .service-card--support::before{grid-column:1;grid-row:1/3;align-self:stretch;width:100%;height:100%;margin:0}
+    .service-card--support::after{left:calc(50% + 14px)}
+    .service-card--support .service-icon{top:auto;bottom:18px;left:calc(50% - 27px)}
+    .service-card--support h3{grid-column:2;grid-row:1;align-self:end;margin:0;padding:28px 30px 6px}
+    .service-card--support p{grid-column:2;grid-row:2;padding:0 30px 28px}
+    @media(max-width:900px){.service-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.service-card::before{height:198px}.service-icon{top:170px}.service-card h3{margin-top:38px}.services-section{padding:82px 0 94px}.approach-section{padding:76px 0 100px}.contact-section{padding:96px 0 84px}.faq-section{padding:74px 0 104px}}
+    @media(max-width:740px){.services-section{padding:78px 0 88px}.approach-section{padding:68px 0 86px}.contact-section{padding:84px 0 78px}.faq-section{padding:70px 0 94px}.service-grid{gap:15px}.service-card{padding:0 18px 21px}.service-card::before{width:calc(100% + 36px);height:190px;margin-inline:-18px}.service-icon{top:162px;left:14px}.service-card h3{margin-top:38px}}
+    @media(max-width:480px){.service-grid{grid-template-columns:1fr;gap:16px}.service-card{padding:0 20px 23px}.service-card::before{width:calc(100% + 40px);height:clamp(205px,58vw,245px);margin-inline:-20px}.service-icon{top:calc(clamp(205px,58vw,245px) - 28px);left:16px}.service-card h3{margin-top:39px}.service-card--support{grid-column:auto;display:block;min-height:0;padding:0 20px 23px}.service-card--support::before{width:calc(100% + 40px);height:clamp(205px,58vw,245px);margin-inline:-20px}.service-card--support::after{left:14px}.service-card--support .service-icon{top:calc(clamp(205px,58vw,245px) - 28px);right:auto;bottom:auto;left:16px}.service-card--support h3{grid-column:auto;grid-row:auto;align-self:auto;margin:39px 0 7px;padding:0}.service-card--support p{grid-column:auto;grid-row:auto;padding:0}.service-photo-note{text-align:left;line-height:1.55}}
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"ProfessionalService","name":"DAEV TECH","description":"Software and web development, project assistance, CCTV installation, laptop repairs, Windows installation and technology support.","email":"daevmassy@gmail.com","telephone":"+263786405808","logo":"assets/daevtech-wordmark.webp","contactPoint":[{"@type":"ContactPoint","telephone":"+263715306724","contactType":"WhatsApp"}]}
@@ -81,6 +121,7 @@
           <article class="service-card"><div class="service-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 3h9v8H2V3Zm11 0h9v8h-9V3ZM2 13h9v8H2v-8Zm11 0h9v8h-9v-8Z"/></svg></div><h3>Windows installation</h3><p>Windows installation and setup, including essential updates and drivers for your device.</p></article>
           <article class="service-card service-card--support"><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-2a8 8 0 0 1 16 0v2M4 13H3a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3v-6H4ZM20 13h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-3v-6h2ZM17 19a5 5 0 0 1-5 3h-2"/></svg></div><h3>Tech support</h3><p>Friendly troubleshooting and practical guidance for everyday technology problems.</p></article>
         </div>
+        <p class="service-photo-note">Service photos are illustrative; actual equipment and project results vary.</p>
       </div>
     </section>
     <section class="section approach-section" id="approach" aria-labelledby="approach-title">

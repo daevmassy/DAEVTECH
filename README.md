@@ -20,6 +20,10 @@ Open `index.html` in a browser, or serve the repository root with any static web
 
 The service wording avoids fixed pricing or response-time promises; confirm availability, requirements, licensing and any quote directly with DAEV TECH.
 
-## Optional GitHub Pages hosting
+## Service photography
 
-This repository contains a static site. To publish it with GitHub Pages, open **Settings → Pages**, choose **Deploy from a branch**, then select `main` and the repository root (`/`). Publishing has not been enabled by this commit.
+The service photos are illustrative stock images, not photographs of DAEV TECH installations or client projects. They are stored locally in `assets/services/`, so the site does not make third-party image requests at runtime. Images are from Unsplash and used under the [Unsplash License](https://unsplash.com/license).
+
+## GitHub Pages
+
+The static site is published from the `main` branch and repository root at <https://daevmassy.github.io/DAEVTECH/>.
