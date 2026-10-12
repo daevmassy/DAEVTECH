@@ -63,6 +63,42 @@
     @media(max-width:900px){.service-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.service-card::before{height:198px}.service-icon{top:170px}.service-card h3{margin-top:38px}.services-section{padding:82px 0 94px}.approach-section{padding:76px 0 100px}.contact-section{padding:96px 0 84px}.faq-section{padding:74px 0 104px}}
     @media(max-width:740px){.services-section{padding:78px 0 88px}.approach-section{padding:68px 0 86px}.contact-section{padding:84px 0 78px}.faq-section{padding:70px 0 94px}.service-grid{gap:15px}.service-card{padding:0 18px 21px}.service-card::before{width:calc(100% + 36px);height:190px;margin-inline:-18px}.service-icon{top:162px;left:14px}.service-card h3{margin-top:38px}}
     @media(max-width:480px){.service-grid{grid-template-columns:1fr;gap:16px}.service-card{padding:0 20px 23px}.service-card::before{width:calc(100% + 40px);height:clamp(205px,58vw,245px);margin-inline:-20px}.service-icon{top:calc(clamp(205px,58vw,245px) - 28px);left:16px}.service-card h3{margin-top:39px}.service-card--support{grid-column:auto;display:block;min-height:0;padding:0 20px 23px}.service-card--support::before{width:calc(100% + 40px);height:clamp(205px,58vw,245px);margin-inline:-20px}.service-card--support::after{left:14px}.service-card--support .service-icon{top:calc(clamp(205px,58vw,245px) - 28px);right:auto;bottom:auto;left:16px}.service-card--support h3{grid-column:auto;grid-row:auto;align-self:auto;margin:39px 0 7px;padding:0}.service-card--support p{grid-column:auto;grid-row:auto;padding:0}.service-photo-note{text-align:left;line-height:1.55}}
+    /* Give each service a distinct content inset and breathing room while keeping its photo full-bleed. */
+    body{padding-bottom:112px}
+    .service-card{--service-inset:24px;--service-bottom-space:26px;--service-title-gap:38px;padding:0}
+    .service-card::before{width:100%;height:var(--service-photo-height,190px);margin:0}
+    .service-icon{top:calc(var(--service-photo-height,190px) - 28px)}
+    .service-card h3{margin:var(--service-title-gap) 0 7px;padding-inline:var(--service-inset)}
+    .service-card p{padding:0 var(--service-inset) var(--service-bottom-space)}
+    .service-card:nth-child(1){--service-inset:31px;--service-bottom-space:30px;--service-title-gap:38px}
+    .service-card:nth-child(2){--service-inset:20px;--service-bottom-space:24px;--service-title-gap:44px}
+    .service-card:nth-child(3){--service-inset:28px;--service-bottom-space:34px;--service-title-gap:36px}
+    .service-card:nth-child(4){--service-inset:18px;--service-bottom-space:27px;--service-title-gap:42px}
+    .service-card:nth-child(5){--service-inset:34px;--service-bottom-space:25px;--service-title-gap:39px}
+    .service-card:nth-child(6){--service-inset:23px;--service-bottom-space:33px;--service-title-gap:41px}
+    .service-card:nth-child(7){--service-inset:36px;--service-bottom-space:31px;--service-title-gap:40px}
+    .service-card--support h3{margin:0;padding:28px var(--service-inset) 6px}
+    .service-card--support p{padding:0 var(--service-inset) var(--service-bottom-space)}
+    .brand-float{position:fixed;z-index:40;left:50%;bottom:calc(14px + env(safe-area-inset-bottom));width:min(860px,calc(100vw - 40px));min-height:76px;display:grid;grid-template-columns:46px minmax(0,1fr) auto;align-items:center;gap:15px;padding:12px 16px;overflow:hidden;border:1px solid rgba(117,206,230,.24);border-radius:22px;background:rgba(6,22,44,.96);color:#fff;box-shadow:0 18px 55px rgba(5,18,38,.32),0 4px 14px rgba(8,27,53,.18);backdrop-filter:blur(18px);transform:translateX(-50%)}
+    .brand-float::before{position:absolute;top:0;left:12%;width:76%;height:2px;background:linear-gradient(90deg,transparent,#43cedd,transparent);content:""}
+    .brand-float__mark{width:46px;height:46px;display:grid;place-items:center;border:1px solid rgba(124,197,235,.2);border-radius:15px;background:rgba(255,255,255,.08)}
+    .brand-float__mark img{width:32px;height:32px;object-fit:contain}
+    .brand-float__copy{min-width:0}
+    .brand-float__eyebrow{display:block;margin-bottom:2px;overflow:hidden;color:#75d7e2;font-size:.62rem;font-weight:800;letter-spacing:.12em;text-overflow:ellipsis;text-transform:uppercase;white-space:nowrap}
+    .brand-float__carousel{position:relative;height:25px;overflow:hidden}
+    .brand-float__message{position:absolute;inset:0;display:flex;align-items:center;overflow:hidden;color:#f1f7ff;font-size:.88rem;font-weight:650;line-height:1.35;opacity:0;text-overflow:ellipsis;transform:translateY(11px);white-space:nowrap;animation:daev-float-cycle 20s ease-in-out infinite}
+    .brand-float__message:nth-child(2){animation-delay:-15s}
+    .brand-float__message:nth-child(3){animation-delay:-10s}
+    .brand-float__message:nth-child(4){animation-delay:-5s}
+    @keyframes daev-float-cycle{0%{opacity:0;transform:translateY(11px)}4%,25%{opacity:1;transform:translateY(0)}28%,100%{opacity:0;transform:translateY(-11px)}}
+    .brand-float__contact{min-height:43px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 15px;border:1px solid rgba(255,255,255,.13);border-radius:999px;background:linear-gradient(120deg,#1765d1,#2584e7);color:#fff;text-decoration:none;font-size:.8rem;font-weight:750;white-space:nowrap;box-shadow:0 8px 20px rgba(16,91,191,.24);transition:transform .18s,filter .18s}
+    .brand-float__contact:hover{filter:brightness(1.1);transform:translateY(-2px)}
+    .brand-float__contact svg{width:16px;height:16px;flex:none}
+    .brand-float:hover .brand-float__message,.brand-float:focus-within .brand-float__message{animation-play-state:paused}
+    @media(max-width:900px){.service-card{--service-photo-height:198px}}
+    @media(max-width:740px){.service-card{--service-photo-height:190px}.service-card:nth-child(1){--service-inset:24px;--service-bottom-space:27px;--service-title-gap:39px}.service-card:nth-child(2){--service-inset:18px;--service-bottom-space:23px;--service-title-gap:44px}.service-card:nth-child(3){--service-inset:26px;--service-bottom-space:30px;--service-title-gap:37px}.service-card:nth-child(4){--service-inset:17px;--service-bottom-space:24px;--service-title-gap:42px}.service-card:nth-child(5){--service-inset:27px;--service-bottom-space:25px;--service-title-gap:39px}.service-card:nth-child(6){--service-inset:20px;--service-bottom-space:29px;--service-title-gap:41px}.service-card:nth-child(7){--service-inset:28px;--service-bottom-space:29px;--service-title-gap:40px}.brand-float{left:14px;right:14px;width:auto;transform:none;grid-template-columns:40px minmax(0,1fr) auto;gap:11px;padding:10px 12px;min-height:68px}.brand-float__mark{width:40px;height:40px}.brand-float__mark img{width:28px;height:28px}.brand-float__eyebrow{font-size:.56rem}.brand-float__message{font-size:.78rem}.brand-float__contact{min-height:40px;padding:9px 12px;font-size:.75rem}}
+    @media(max-width:480px){body{padding-bottom:104px}.service-card{--service-photo-height:clamp(205px,58vw,245px)}.brand-float{left:12px;right:12px;width:auto;transform:none;bottom:calc(10px + env(safe-area-inset-bottom));grid-template-columns:36px minmax(0,1fr) 39px;gap:9px;padding:9px 10px;min-height:64px;border-radius:18px}.brand-float__mark{width:36px;height:36px;border-radius:12px}.brand-float__mark img{width:25px;height:25px}.brand-float__eyebrow{font-size:.52rem;letter-spacing:.09em}.brand-float__carousel{height:23px}.brand-float__message{font-size:.72rem}.brand-float__contact{width:39px;min-height:39px;padding:0}.brand-float__contact span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}.brand-float__contact svg{width:16px;height:16px}.service-card--support{grid-column:auto;display:block;min-height:0;padding:0}.service-card--support::before{width:100%;height:var(--service-photo-height);margin:0}.service-card--support .service-icon{top:calc(var(--service-photo-height) - 28px);right:auto;bottom:auto;left:16px}.service-card--support h3{margin:var(--service-title-gap) 0 7px;padding-inline:var(--service-inset)}.service-card--support p{padding:0 var(--service-inset) var(--service-bottom-space)}}
+    @media(prefers-reduced-motion:reduce){.brand-float__message{animation:none;transform:none}.brand-float__message:first-child{opacity:1}}
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"ProfessionalService","name":"DAEV TECH","description":"Software and web development, project assistance, CCTV installation, laptop repairs, Windows installation and technology support.","email":"daevmassy@gmail.com","telephone":"+263786405808","logo":"assets/daevtech-wordmark.webp","contactPoint":[{"@type":"ContactPoint","telephone":"+263715306724","contactType":"WhatsApp"}]}
@@ -141,5 +177,18 @@
     </section>
   </main>
   <footer class="footer"><div class="container"><div class="footer-inner"><div class="footer-brand"><img src="assets/daevtech-wordmark.webp" width="145" height="38" alt="DAEV TECH — Smart solutions, better future"><p>Thoughtful technology for people and businesses.</p></div><nav class="footer-links" aria-label="Footer navigation"><a href="#services">Services</a><a href="#approach">How we work</a><a href="#contact">Contact</a><a href="mailto:daevmassy@gmail.com">Email DAEV TECH</a></nav></div><div class="footer-bottom"><p>© DAEV TECH. All rights reserved.</p><p>Smart solutions. Better future.</p></div></div></footer>
+  <aside class="brand-float" aria-label="DAEV TECH highlights and contact">
+    <a class="brand-float__mark" href="#home" aria-label="DAEV TECH home"><img src="assets/daevtech-mark.webp" alt=""></a>
+    <div class="brand-float__copy">
+      <span class="brand-float__eyebrow">DAEV TECH · Smart solutions, better future</span>
+      <div class="brand-float__carousel" aria-hidden="true">
+        <span class="brand-float__message">Thoughtful tech for home and work.</span>
+        <span class="brand-float__message">Custom software and responsive websites.</span>
+        <span class="brand-float__message">CCTV, repairs and Windows setup.</span>
+        <span class="brand-float__message">Practical support and clear next steps.</span>
+      </div>
+    </div>
+    <a class="brand-float__contact" href="#contact" aria-label="Contact DAEV TECH"><span>Contact</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </aside>
 </body>
 </html>
