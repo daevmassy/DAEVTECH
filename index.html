@@ -64,7 +64,7 @@
     @media(max-width:740px){.services-section{padding:78px 0 88px}.approach-section{padding:68px 0 86px}.contact-section{padding:84px 0 78px}.faq-section{padding:70px 0 94px}.service-grid{gap:15px}.service-card{padding:0 18px 21px}.service-card::before{width:calc(100% + 36px);height:190px;margin-inline:-18px}.service-icon{top:162px;left:14px}.service-card h3{margin-top:38px}}
     @media(max-width:480px){.service-grid{grid-template-columns:1fr;gap:16px}.service-card{padding:0 20px 23px}.service-card::before{width:calc(100% + 40px);height:clamp(205px,58vw,245px);margin-inline:-20px}.service-icon{top:calc(clamp(205px,58vw,245px) - 28px);left:16px}.service-card h3{margin-top:39px}.service-card--support{grid-column:auto;display:block;min-height:0;padding:0 20px 23px}.service-card--support::before{width:calc(100% + 40px);height:clamp(205px,58vw,245px);margin-inline:-20px}.service-card--support::after{left:14px}.service-card--support .service-icon{top:calc(clamp(205px,58vw,245px) - 28px);right:auto;bottom:auto;left:16px}.service-card--support h3{grid-column:auto;grid-row:auto;align-self:auto;margin:39px 0 7px;padding:0}.service-card--support p{grid-column:auto;grid-row:auto;padding:0}.service-photo-note{text-align:left;line-height:1.55}}
     /* Give each service a distinct content inset and breathing room while keeping its photo full-bleed. */
-    body{padding-bottom:112px}
+    body{padding-bottom:0}
     .service-card{--service-inset:24px;--service-bottom-space:26px;--service-title-gap:38px;padding:0}
     .service-card::before{width:100%;height:var(--service-photo-height,190px);margin:0}
     .service-icon{top:calc(var(--service-photo-height,190px) - 28px)}
@@ -79,7 +79,7 @@
     .service-card:nth-child(7){--service-inset:36px;--service-bottom-space:31px;--service-title-gap:40px}
     .service-card--support h3{margin:0;padding:28px var(--service-inset) 6px}
     .service-card--support p{padding:0 var(--service-inset) var(--service-bottom-space)}
-    .brand-float{position:fixed;z-index:40;left:0;right:0;bottom:0;width:auto;min-height:76px;display:grid;grid-template-columns:46px minmax(0,1fr) auto;align-items:center;gap:15px;padding:12px max(22px,calc((100vw - 860px)/2));overflow:hidden;border:1px solid rgba(117,206,230,.24);border-left:0;border-right:0;border-bottom:0;border-radius:22px 22px 0 0;background:rgba(6,22,44,.97);color:#fff;box-shadow:0 -12px 45px rgba(5,18,38,.2);backdrop-filter:blur(18px)}
+    .brand-float{position:relative;z-index:1;width:100%;max-width:860px;min-height:76px;display:grid;grid-template-columns:46px minmax(0,1fr) auto;align-items:center;gap:15px;margin:23px auto 0;padding:12px 16px;overflow:hidden;border:1px solid rgba(117,206,230,.24);border-radius:22px;background:rgba(6,22,44,.74);color:#fff;box-shadow:0 10px 28px rgba(0,0,0,.16);backdrop-filter:blur(12px)}
     .brand-float::before{position:absolute;top:0;left:12%;width:76%;height:2px;background:linear-gradient(90deg,transparent,#43cedd,transparent);content:""}
     .brand-float__mark{width:46px;height:46px;display:grid;place-items:center;border:1px solid rgba(124,197,235,.2);border-radius:15px;background:rgba(255,255,255,.08)}
     .brand-float__mark img{width:32px;height:32px;object-fit:contain}
@@ -99,6 +99,11 @@
     @media(max-width:740px){.service-card{--service-photo-height:190px}.service-card:nth-child(1){--service-inset:24px;--service-bottom-space:27px;--service-title-gap:39px}.service-card:nth-child(2){--service-inset:18px;--service-bottom-space:23px;--service-title-gap:44px}.service-card:nth-child(3){--service-inset:26px;--service-bottom-space:30px;--service-title-gap:37px}.service-card:nth-child(4){--service-inset:17px;--service-bottom-space:24px;--service-title-gap:42px}.service-card:nth-child(5){--service-inset:27px;--service-bottom-space:25px;--service-title-gap:39px}.service-card:nth-child(6){--service-inset:20px;--service-bottom-space:29px;--service-title-gap:41px}.service-card:nth-child(7){--service-inset:28px;--service-bottom-space:29px;--service-title-gap:40px}.brand-float{left:0;right:0;width:auto;transform:none;border-radius:18px 18px 0 0;grid-template-columns:40px minmax(0,1fr) auto;gap:11px;padding:10px 14px;min-height:68px}.brand-float__mark{width:40px;height:40px}.brand-float__mark img{width:28px;height:28px}.brand-float__eyebrow{font-size:.56rem}.brand-float__message{font-size:.78rem}.brand-float__contact{min-height:40px;padding:9px 12px;font-size:.75rem}}
     @media(max-width:480px){body{padding-bottom:104px}.service-card{--service-photo-height:clamp(205px,58vw,245px)}.brand-float{left:0;right:0;width:auto;transform:none;bottom:0;grid-template-columns:36px minmax(0,1fr) 39px;gap:9px;padding:9px 12px calc(9px + env(safe-area-inset-bottom));min-height:64px;border-radius:16px 16px 0 0}.brand-float__mark{width:36px;height:36px;border-radius:12px}.brand-float__mark img{width:25px;height:25px}.brand-float__eyebrow{font-size:.52rem;letter-spacing:.09em}.brand-float__carousel{height:23px}.brand-float__message{font-size:.72rem}.brand-float__contact{width:39px;min-height:39px;padding:0}.brand-float__contact span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}.brand-float__contact svg{width:16px;height:16px}.service-card--support{grid-column:auto;display:block;min-height:0;padding:0}.service-card--support::before{width:100%;height:var(--service-photo-height);margin:0}.service-card--support .service-icon{top:calc(var(--service-photo-height) - 28px);right:auto;bottom:auto;left:16px}.service-card--support h3{margin:var(--service-title-gap) 0 7px;padding-inline:var(--service-inset)}.service-card--support p{padding:0 var(--service-inset) var(--service-bottom-space)}}
     @media(max-width:360px){.header-inner{gap:10px}.brand{gap:7px}.brand img{width:35px;height:35px}.brand-copy strong{font-size:.84rem}.brand-copy span{max-width:128px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.49rem}.mobile-nav summary{gap:6px;padding:8px 9px}}
+    /* Keep the rotating brand strip in the page-end footer instead of over page content. */
+    body{padding-bottom:0}
+    .brand-float{position:relative;inset:auto;z-index:1;width:100%;max-width:860px;min-height:76px;margin:23px auto 0;padding:12px 16px;border:1px solid rgba(117,206,230,.24);border-radius:22px;background:rgba(6,22,44,.74);box-shadow:0 10px 28px rgba(0,0,0,.16);backdrop-filter:blur(12px);transform:none}
+    @media(max-width:740px){.brand-float{width:100%;min-height:68px;margin-top:20px;padding:10px 14px;grid-template-columns:40px minmax(0,1fr) auto;gap:11px;border-radius:18px}}
+    @media(max-width:480px){.brand-float{width:100%;min-height:64px;margin-top:18px;padding:9px 12px;grid-template-columns:36px minmax(0,1fr) 39px;gap:9px;border-radius:16px}}
     @media(prefers-reduced-motion:reduce){.brand-float__message{animation:none;transform:none}.brand-float__message:first-child{opacity:1}}
   </style>
   <script type="application/ld+json">
@@ -177,19 +182,24 @@
       <div class="container faq-layout"><div><span class="eyebrow">A good place to start</span><h2 class="section-title" id="about-title">Practical answers, before you reach out.</h2><p class="section-intro">Not sure which service fits? A short description of the issue or idea is enough to begin.</p></div><div class="faq-list"><details><summary>What should I include in my first message?</summary><p>Tell us which service you are asking about, what you want to achieve and any device or setup details that seem relevant. A photo or screenshot can help explain a technical issue.</p></details><details><summary>Do I need to know exactly what solution I need?</summary><p>No. Describe the problem or result you have in mind and what you currently use. DAEV TECH can help clarify options and agree on a suitable scope.</p></details><details><summary>How are cost and scope agreed?</summary><p>They depend on the work involved. The requirements and proposed scope are discussed with you before work starts; ask for a quote when you get in touch.</p></details><details><summary>Should I send my password to explain a support issue?</summary><p>No. Do not share passwords or one-time sign-in codes by email or WhatsApp. Describe the issue instead; access arrangements can be discussed through an appropriate, secure process if needed.</p></details></div></div>
     </section>
   </main>
-  <footer class="footer"><div class="container"><div class="footer-inner"><div class="footer-brand"><img src="assets/daevtech-wordmark.webp" width="145" height="38" alt="DAEV TECH — Smart solutions, better future"><p>Thoughtful technology for people and businesses.</p></div><nav class="footer-links" aria-label="Footer navigation"><a href="#services">Services</a><a href="#approach">How we work</a><a href="#contact">Contact</a><a href="mailto:daevmassy@gmail.com">Email DAEV TECH</a></nav></div><div class="footer-bottom"><p>© DAEV TECH. All rights reserved.</p><p>Smart solutions. Better future.</p></div></div></footer>
-  <aside class="brand-float" aria-label="DAEV TECH highlights and contact">
-    <a class="brand-float__mark" href="#home" aria-label="DAEV TECH home"><img src="assets/daevtech-mark.webp" alt=""></a>
-    <div class="brand-float__copy">
-      <span class="brand-float__eyebrow">DAEV TECH · Smart solutions, better future</span>
-      <div class="brand-float__carousel" aria-hidden="true">
-        <span class="brand-float__message">Thoughtful tech for home and work.</span>
-        <span class="brand-float__message">Custom software and responsive websites.</span>
-        <span class="brand-float__message">CCTV, repairs and Windows setup.</span>
-        <span class="brand-float__message">Practical support and clear next steps.</span>
-      </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner"><div class="footer-brand"><img src="assets/daevtech-wordmark.webp" width="145" height="38" alt="DAEV TECH — Smart solutions, better future"><p>Thoughtful technology for people and businesses.</p></div><nav class="footer-links" aria-label="Footer navigation"><a href="#services">Services</a><a href="#approach">How we work</a><a href="#contact">Contact</a><a href="mailto:daevmassy@gmail.com">Email DAEV TECH</a></nav></div>
+      <div class="footer-bottom"><p>© DAEV TECH. All rights reserved.</p><p>Smart solutions. Better future.</p></div>
+      <aside class="brand-float" aria-label="DAEV TECH highlights and contact">
+        <a class="brand-float__mark" href="#home" aria-label="DAEV TECH home"><img src="assets/daevtech-mark.webp" alt=""></a>
+        <div class="brand-float__copy">
+          <span class="brand-float__eyebrow">DAEV TECH · Smart solutions, better future</span>
+          <div class="brand-float__carousel" aria-hidden="true">
+            <span class="brand-float__message">Thoughtful tech for home and work.</span>
+            <span class="brand-float__message">Custom software and responsive websites.</span>
+            <span class="brand-float__message">CCTV, repairs and Windows setup.</span>
+            <span class="brand-float__message">Practical support and clear next steps.</span>
+          </div>
+        </div>
+        <a class="brand-float__contact" href="#contact" aria-label="Contact DAEV TECH"><span>Contact</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </aside>
     </div>
-    <a class="brand-float__contact" href="#contact" aria-label="Contact DAEV TECH"><span>Contact</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-  </aside>
+  </footer>
 </body>
 </html>
