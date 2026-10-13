@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: daevtech
-    runtime: static
-    staticPublishPath: ./
-    headers:
-      - path: /*
-        name: X-Frame-Options
-        value: SAMEORIGIN
