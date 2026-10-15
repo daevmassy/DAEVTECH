@@ -27,3 +27,9 @@ The service photos are illustrative stock images, not photographs of DAEV TECH i
 ## GitHub Pages
 
 The static site is published from the `main` branch and repository root at <https://daevmassy.github.io/DAEVTECH/>.
+
+## Render
+
+This repository includes a root-level `render.yaml` Blueprint for Render. It configures the site as a static site that deploys from the `main` branch and publishes the repository root. No app server, build dependencies, environment variables, or secrets are required.
+
+To create the Render service, sign in to Render, choose **New → Blueprint**, connect `daevmassy/DAEVTECH`, and apply the detected Blueprint. Render will then provide the site's `onrender.com` URL. The existing GitHub Pages site is unchanged.
